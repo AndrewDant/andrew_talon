@@ -22,6 +22,8 @@ send it: key("e")
 # back out of shops or views
 leave: key("q")
 
+back out: key("q")
+
 # Skip a card draft
 skip it: key("q")
 
@@ -32,6 +34,7 @@ speed: key("n")
 
 settings: key("escape")
 
+# the game calls this "access HUD"
 artifacts:key("tab")
 
 draw pile: key("x")
@@ -42,6 +45,12 @@ consume pile: key("v")
 
 the deck: key("z")
 
+# TODO add eaten pile hotkey if it's added to the game
+
+# toggle the list of players in multiplayer
+toggle players: key("r")
+
+# DLC only
 unit essence: key("h")
 
 # Used to play a card immediately on the default target
