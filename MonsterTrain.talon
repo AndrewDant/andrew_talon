@@ -1,6 +1,21 @@
 mode: command
 title: /MonsterTrain/
 -
+# max number of floors
+scroll way up:
+	key("pageup")
+	sleep(60ms)
+	key("pageup")
+	sleep(60ms)
+	key("pageup")
+
+scroll way down:
+	key("pagedown")
+	sleep(60ms)
+	key("pagedown")
+	sleep(60ms)
+	key("pagedown")
+
 # alternate way to end turn
 send it: key("e")
 
