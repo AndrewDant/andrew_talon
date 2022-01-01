@@ -1,6 +1,9 @@
 mode: command
 title: /MonsterTrain/
 -
+settings():
+    key_wait = 50.0
+
 # max number of floors
 scroll way up:
 	key("pageup")
