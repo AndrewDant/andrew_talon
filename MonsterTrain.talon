@@ -1,5 +1,5 @@
 mode: command
-title: /MonsterTrain/
+app.exe: MonsterTrain.exe
 -
 settings():
     key_wait = 50.0
