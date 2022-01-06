@@ -56,6 +56,34 @@ toggle players: key("r")
 # DLC only
 unit essence: key("h")
 
+# select a specific card
+card one:
+	key("1")
+
+card two:
+	key("2")
+
+card three:
+	key("3")
+
+card four:
+	key("4")
+
+card five:
+	key("5")
+
+card six:
+	key("6")
+
+card seven:
+	key("7")
+
+card eight:
+	key("8")
+
+card nine:
+	key("9")
+
 # Used to play a card immediately on the default target
 play one:
 	key("1")
