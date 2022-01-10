@@ -5,3 +5,7 @@ paste plain: key("ctrl-shift-v")
 next: key("ctrl-space")
 
 skip diary: key("ctrl-shift-space")
+
+screen snippet: key("super-shift-s")
+
+show desktop: key("super-d")
