@@ -1,0 +1,22 @@
+voice data set id: eecf2756-6f04-48b0-b617-e8c5b3b20dde
+
+make a formatter for constants
+
+make a list for zero to ten: zeroTenSet
+    useful for captures
+    good practice
+
+ui.active_app()
+events.tail()
+actions.find("")
+
+press a key repeatedly
+key(name:5)
+
+action to repeat the last line only
+repeat()
+
+new letter words for s and q
+
+# look this up to improve screen spots
+draw_list_commands(
