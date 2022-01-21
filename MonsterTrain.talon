@@ -1,4 +1,3 @@
-mode: command
 app.exe: MonsterTrain.exe
 -
 settings():
@@ -18,6 +17,35 @@ scroll way down:
 	key("pagedown")
 	sleep(60ms)
 	key("pagedown")
+
+# max number of units
+go way right:
+	key("right")
+	sleep(60ms)
+	key("right")
+	sleep(60ms)
+	key("right")
+	sleep(60ms)
+	key("right")
+	sleep(60ms)
+	key("right")
+	sleep(60ms)
+	key("right")
+	sleep(60ms)
+
+go way left:
+	key("left")
+	sleep(60ms)
+	key("left")
+	sleep(60ms)
+	key("left")
+	sleep(60ms)
+	key("left")
+	sleep(60ms)
+	key("left")
+	sleep(60ms)
+	key("left")
+	sleep(60ms)
 
 # alternate way to end turn
 send it: key("e")
