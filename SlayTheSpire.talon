@@ -1,5 +1,6 @@
 mode: command
 title: /^Slay the Spire$/
+
 -
 settings():
     key_wait = 240
@@ -16,8 +17,13 @@ discard pile: key("s")
 
 exhaust pile: key("x")
 
-# select a specific card
+scroll up: user.mouse_scroll_up(55)
 
+scroll down: user.mouse_scroll_down(55)
+
+scroll way up: user.mouse_scroll_up(5555)
+
+# select a specific card
 card one:
 	key("1")
 
@@ -40,6 +46,10 @@ card seven:
 	key("7")
 
 card eight:
+	key("8")
+
+# fix for a frequent miss hear
+caret:
 	key("8")
 
 card nine:
