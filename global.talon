@@ -16,3 +16,5 @@ pop: key("space")
     insert("{number_small}:00")
 
 crack: key("ctrl")
+
+<user.thing_length>: core.repeat_command(thing_length)
