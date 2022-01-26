@@ -1,4 +1,5 @@
-from talon import Module, actions, noise
+from talon_plugins import eye_mouse
+
 
 mod = Module()
 
@@ -19,7 +20,7 @@ class UserActions:
 
 
 def hiss_handler(active):
-    if active:
+    if active and eye_mouse.mouse.attached_tracker is not None:
         actions.user.noise_hiss_start()
     else:
         actions.user.noise_hiss_stop()
