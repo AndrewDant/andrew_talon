@@ -50,6 +50,11 @@ go way left:
 # alternate way to end turn
 send it: key("e")
 
+# DO NOT GET THESE TWO CONFUSED
+
+# presses enter, which is often used to confirm things
+confirm: key("enter")
+
 # back out of shops or views
 leave: key("q")
 
