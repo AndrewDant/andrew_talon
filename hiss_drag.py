@@ -31,10 +31,12 @@ def validate_hiss():
 
 
 def hiss_handler(active):
-    if active and eye_mouse.mouse.attached_tracker is not None:
-        actions.user.noise_hiss_start()
-    else:
-        actions.user.noise_hiss_stop()
+    # aegis says this api will definitely change
+    if eye_mouse.mouse.attached_tracker is not None:
+        if active:
+            actions.user.noise_hiss_start()
+        else:
+            actions.user.noise_hiss_stop()
 
 
 # register the handler to the noise
