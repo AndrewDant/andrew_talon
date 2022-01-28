@@ -5,6 +5,7 @@ title: /^Slay the Spire$/
 settings():
     key_wait = 240
 
+# !! ends your turn !!
 send it: key("e")
 
 map: key("m")

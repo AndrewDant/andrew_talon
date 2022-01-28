@@ -47,7 +47,7 @@ go way left:
 	key("left")
 	sleep(60ms)
 
-# alternate way to end turn
+# !! alternate way to end turn
 send it: key("e")
 
 # DO NOT GET THESE TWO CONFUSED
