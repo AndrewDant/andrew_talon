@@ -15,6 +15,8 @@ pop: key("space")
 <number_small> o'clock:
     insert("{number_small}:00")
 
-crack: key("ctrl")
-
 <user.thing_length>: core.repeat_command(thing_length)
+
+^go to sleep [<phrase>]$: speech.disable()
+
+key(shift-alt-8): speech.toggle()
