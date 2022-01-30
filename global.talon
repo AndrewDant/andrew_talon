@@ -1,6 +1,9 @@
-space bar: key("space")
-
 paste plain: key("ctrl-shift-v")
+
+save next:
+	key("ctrl-shift:down")
+	mouse_click(0)
+	key("ctrl-shift:up")
 
 next: key("ctrl-space")
 
