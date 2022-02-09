@@ -1,7 +1,7 @@
-from talon import Module, actions, noise, cron
+from talon import Module, actions, noise, cron, scope
 from talon_plugins import eye_mouse
 
-min_hiss_time = "200ms"
+min_hiss_time = "150ms"
 ongoing_hiss = False
 
 mod = Module()
@@ -31,8 +31,11 @@ def validate_hiss():
 
 
 def hiss_handler(active):
+    sleep_mode = "sleep" in scope.get("mode")
     # aegis says this api will definitely change
-    if eye_mouse.mouse.attached_tracker is not None:
+    active_eyetracker = eye_mouse.mouse.attached_tracker is not None
+
+    if active_eyetracker and not sleep_mode:
         if active:
             actions.user.noise_hiss_start()
         else:
