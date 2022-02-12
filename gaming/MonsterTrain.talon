@@ -1,7 +1,12 @@
 app.exe: MonsterTrain.exe
 -
 settings():
-    key_wait = 50.0
+    key_wait = 48.0
+
+
+parrot(whistle): key("pageup")
+
+parrot(fff): key("pagedown")
 
 # max number of floors
 scroll way up:
