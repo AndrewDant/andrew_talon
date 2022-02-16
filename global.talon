@@ -35,3 +35,7 @@ nozzle: insert("knausj")
 google that: key(ctrl-g)
 
 go time zone: key("down:124")
+
+
+(frees|freeze|unfreeze):
+	user.mouse_toggle_control_mouse()
