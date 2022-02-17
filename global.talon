@@ -37,5 +37,13 @@ google that: key(ctrl-g)
 go time zone: key("down:124")
 
 
-(frees|freeze|unfreeze):
+laser [vision]:
 	user.mouse_toggle_control_mouse()
+
+(freeze|frees):
+	user.freeze()
+
+(unfreeze|one freeze|one frees):
+	user.unfreeze()
+
+clipboard: key("super-v")
