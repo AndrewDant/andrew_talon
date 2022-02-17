@@ -16,15 +16,26 @@ key(name:5)
 action to repeat the last line only
 repeat()
 
-new letter words for s and q
-
 # look this up to improve screen spots
 draw_list_commands(
 
 the Job class is only used to return to cron in order to cancel that job
 
 
-to edit the tobii's head movement velocity:
+#to edit the tobii's head movement velocity:
 from talon_plugins import eye_mouse
 from talon.types import Point2d
 eye_mouse.config.velocity = Point2d(150, 225)
+
+# voice command to open the talon repl
+talon open rebel
+
+# could write commands to jump to specific known folders or webpages
+
+# hunt all to search everywhere in vscode
+
+# try vimium for better chrome browsing
+
+# slap is go to end of line then enter, not just press enter
+
+# I confirmed that breathing out is sometimes mistaken as a hiss
