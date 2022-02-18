@@ -1,14 +1,5 @@
 paste plain: key("ctrl-shift-v")
 
-save next:
-	key("ctrl-shift:down")
-	mouse_click(0)
-	key("ctrl-shift:up")
-
-next: key("ctrl-space")
-
-skip diary: key("ctrl-shift-space")
-
 screen snippet: key("super-shift-s")
 
 show desktop: key("super-d")
@@ -34,8 +25,9 @@ nozzle: insert("knausj")
 
 google that: key(ctrl-g)
 
-go time zone: key("down:124")
-
+# still a work in progress, would like it to open this workspace
+talon launch config:
+    user.system_command_nb("code ~/.talon/user")
 
 laser [vision]:
 	user.mouse_toggle_control_mouse()
