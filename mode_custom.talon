@@ -1,6 +1,5 @@
 not mode: sleep
 -
-^command mode <phrase>:
-    mode.disable("sleep")
+^commander$:
     mode.disable("dictation")
     mode.enable("command")
