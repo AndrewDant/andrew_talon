@@ -32,10 +32,19 @@ talon launch config:
 laser [vision]:
 	user.mouse_toggle_control_mouse()
 
-(freeze|frees):
-	user.freeze()
-
-(unfreeze|one freeze|one frees):
-	user.unfreeze()
+stop:
+	user.toggle_freeze()
 
 clipboard: key("super-v")
+
+mute me: key(ctrl-d)
+
+semi: key(;)
+
+mute discord: key(ctrl-shift-m)
+
+toad: insert('TODO ')
+
+double equals: insert('==')
+
+triple equals: insert('===')
