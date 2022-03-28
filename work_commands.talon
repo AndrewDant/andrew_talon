@@ -8,8 +8,13 @@ admin login:
 	insert("54321")
 	key(tab)
 
+training code:
+	insert("A1B2C3")
+	key(tab)
+
 go time zone:
-	key("down:124")
+	# key("down:124")
+	key("down:155")
 	key(enter)
 
 save next:
