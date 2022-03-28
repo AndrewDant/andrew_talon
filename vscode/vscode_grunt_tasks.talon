@@ -6,10 +6,10 @@ handheld dev:
 handheld build and install:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: handheld-android-build-and-install")
 
-handheld just build:
+handheld [just] build:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: handheld-android-build")
 
-handheld just install:
+handheld [just] install:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: handheld-android-install")
 
 tablet dev:
@@ -18,10 +18,10 @@ tablet dev:
 tablet build and install:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: tablet-android-build-and-install")
 
-tablet just build:
+tablet [just] build:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: tablet-android-build")
 
-tablet just install:
+tablet [just] install:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: tablet-android-install")
 
 start server:
