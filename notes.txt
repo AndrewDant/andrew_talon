@@ -39,3 +39,16 @@ talon open rebel
 # slap is go to end of line then enter, not just press enter
 
 # I confirmed that breathing out is sometimes mistaken as a hiss
+
+# list of application names (from talon's point of view)
+registry.lists['user.launch'][-1].keys()
+
+# you can use the repl to get help
+>>> from talon import imgui
+>>> help(imgui.open)
+
+# ! I should make better commands for focusing the things I use most, i.e. 'coder' for vscode
+
+# 'help scope' for active scope information, i.e. modes, tags, etc  
+
+# 'ship' for upper case letters, 'sink' to then switch to lower case again. i.e. "ship sit drum each sink soap" -> IDEs
