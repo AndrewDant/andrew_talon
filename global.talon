@@ -37,7 +37,8 @@ stop:
 
 clipboard: key("super-v")
 
-mute me: key(ctrl-d)
+# TODO make this also disable talon?
+mute me: key(ctrl-shift-m)
 
 semi: key(;)
 
@@ -48,3 +49,7 @@ toad: insert('TODO ')
 double equals: insert('==')
 
 triple equals: insert('===')
+
+focus next: key(alt-tab)
+
+my name: insert('Andrew Dant')
