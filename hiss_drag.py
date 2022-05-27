@@ -31,6 +31,7 @@ def validate_hiss():
 
 
 def hiss_handler(active):
+    print('hiss handler: ' + str(active))
     sleep_mode = "sleep" in scope.get("mode")
     # aegis says this api will definitely change
     active_eyetracker = eye_mouse.mouse.attached_tracker is not None

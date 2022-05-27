@@ -52,3 +52,5 @@ registry.lists['user.launch'][-1].keys()
 # 'help scope' for active scope information, i.e. modes, tags, etc  
 
 # 'ship' for upper case letters, 'sink' to then switch to lower case again. i.e. "ship sit drum each sink soap" -> IDEs
+
+# it is an error for an action to be defined on a context but not a module. Module declares. Context implements. 

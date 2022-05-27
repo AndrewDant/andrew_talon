@@ -8,3 +8,5 @@ settings():
 step [next]: key("f10")
 
 resume: key("f8")
+
+file hunt: key(ctrl-p)

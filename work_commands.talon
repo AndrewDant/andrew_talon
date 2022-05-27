@@ -13,9 +13,14 @@ training code:
 	key(tab)
 
 go time zone:
-	# key("down:124")
-	key("down:155")
+	key(tab)
 	key(enter)
+	sleep(100ms)
+	# key("down:124")
+	key("down:156")
+	key(enter)
+	sleep(50ms)
+	key(ctrl-space)
 
 save next:
 	key("ctrl-shift:down")
@@ -25,3 +30,16 @@ save next:
 next: key("ctrl-space")
 
 skip diary: key("ctrl-shift-space")
+
+my username: insert('andrew.dant')
+
+unlock code: key(ctrl-1)
+
+first (sight|site) [user]:
+	insert('site admin')
+	key(tab:2)
+	insert('1111')
+	key(tab)
+	insert('1111')
+	key(tab)
+	key(ctrl-1)

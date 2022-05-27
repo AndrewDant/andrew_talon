@@ -1,3 +1,3 @@
 mode: all
 -
-^computer$: speech.enable()
+^computer: speech.enable()

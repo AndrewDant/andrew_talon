@@ -2,8 +2,10 @@ from talon import Module
 
 mod = Module()
 
-@mod.capture(rule="(long|longer)")
+@mod.capture(rule="(long|longer|longest)")
 def thing_length(m) -> str:
+    if "longest" in m:
+        return 3
     if "longer" in m:
         return 2
     elif 'long' in m:

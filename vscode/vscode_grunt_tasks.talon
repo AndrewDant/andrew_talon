@@ -26,3 +26,6 @@ tablet [just] install:
 
 start server:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "npm: start - server")
+
+project startup:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: pde-proj-start")
