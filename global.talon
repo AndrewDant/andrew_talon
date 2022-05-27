@@ -14,10 +14,13 @@ pop: key("space")
 
 key(shift-alt-8): speech.toggle()
 
-# experimental from online suggestions
 coalpop: insert(": ")
 
 compop: insert(", ")
+
+comclap:
+	insert(",")
+	key(enter)
 
 nope: edit.undo()
 
@@ -31,6 +34,8 @@ talon launch config:
 
 laser [vision]:
 	user.mouse_toggle_control_mouse()
+	
+key(shift-alt-7): user.mouse_toggle_control_mouse()
 
 stop:
 	user.toggle_freeze()
@@ -39,8 +44,6 @@ clipboard: key("super-v")
 
 # TODO make this also disable talon?
 mute me: key(ctrl-shift-m)
-
-semi: key(;)
 
 mute discord: key(ctrl-shift-m)
 
@@ -53,3 +56,5 @@ triple equals: insert('===')
 focus next: key(alt-tab)
 
 my name: insert('Andrew Dant')
+
+dot pie: insert('.py')
