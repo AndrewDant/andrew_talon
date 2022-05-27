@@ -4,6 +4,7 @@ title: /^Slay the Spire$/
 -
 settings():
     key_wait = 240
+	user.screen_spots_slow_move_enabled = 1
 
 # !! ends your turn !!
 send it: key("e")

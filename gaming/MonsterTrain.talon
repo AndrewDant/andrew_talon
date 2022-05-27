@@ -2,11 +2,9 @@ app.exe: MonsterTrain.exe
 -
 settings():
     key_wait = 48.0
+	# is this needed for this game?
+	user.screen_spots_slow_move_enabled = 1
 
-
-parrot(whistle): key("pageup")
-
-parrot(fff): key("pagedown")
 
 # max number of floors
 scroll way up:
@@ -53,7 +51,7 @@ go way left:
 	sleep(60ms)
 
 # !! alternate way to end turn
-send it: key("e")
+(send it|witness me): key("e")
 
 # DO NOT GET THESE TWO CONFUSED
 
