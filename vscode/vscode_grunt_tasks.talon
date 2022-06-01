@@ -29,3 +29,6 @@ start server:
 
 project startup:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: pde-proj-start")
+
+change language:
+    user.vscode_with_plugin("workbench.action.editor.changeLanguageMode")
