@@ -22,7 +22,7 @@ go time zone:
 	sleep(50ms)
 	key(ctrl-space)
 
-save next:
+save (next):
 	key("ctrl-shift:down")
 	mouse_click(0)
 	key("ctrl-shift:up")
@@ -43,3 +43,36 @@ first (sight|site) [user]:
 	insert('1111')
 	key(tab)
 	key(ctrl-1)
+	
+handheld (sight|site) user:
+	insert('site user')
+	key(tab)
+	key(enter)
+	key(down)
+	key(enter)
+	sleep(50ms)
+	key(tab)
+	key(enter)
+	key(down)
+	key(enter)
+	sleep(50ms)
+	key(tab)
+	insert('1111')
+	key(tab)
+	insert('1111')
+	key(tab)
+	key(ctrl-space)
+	
+handheld trainer:
+	insert('trainer')
+	key(tab)
+	insert('1')
+	key(ctrl-space)
+	sleep(70ms)
+	key(ctrl-space)
+	sleep(70ms)
+	key(ctrl-space)
+
+email work: insert('andrew.dant@clario.com')
+
+killer bee: user.kill_adb()

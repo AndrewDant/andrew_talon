@@ -10,9 +10,9 @@ pop: key("space")
 
 <user.thing_length>: core.repeat_command(thing_length)
 
-^go to sleep [<phrase>]$: speech.disable()
+^(go to sleep|hey there|voice off) [<phrase>]$: speech.disable()
 
-key(shift-alt-8): speech.toggle()
+key(shift-f11): speech.toggle()
 
 coalpop: insert(": ")
 
@@ -30,22 +30,18 @@ google that: key(ctrl-g)
 
 # still a work in progress, would like it to open this workspace
 talon launch config:
-    user.system_command_nb("code ~/.talon/user")
+    user.system_command_nb("code ~/.talon/user") 
 
 laser [vision]:
 	user.mouse_toggle_control_mouse()
 	
-key(shift-alt-7): user.mouse_toggle_control_mouse()
-
-stop:
-	user.toggle_freeze()
+^new laser$: experimental.control2_toggle()
+	
+key(shift-f10): user.mouse_toggle_control_mouse()
 
 clipboard: key("super-v")
 
-# TODO make this also disable talon?
-mute me: key(ctrl-shift-m)
-
-mute discord: key(ctrl-shift-m)
+(mute|muting) [myself]: key(ctrl-shift-m)
 
 toad: insert('TODO ')
 
@@ -55,6 +51,12 @@ triple equals: insert('===')
 
 focus next: key(alt-tab)
 
-my name: insert('Andrew Dant')
-
 dot pie: insert('.py')
+
+teams mute: user.mute_teams_anywhere()
+
+discord mute: user.mute_discord_anywhere()
+
+super mute: user.mute_teams_or_discord()
+
+key(shift-f9): user.mute_teams_or_discord()

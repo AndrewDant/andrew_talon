@@ -16,3 +16,9 @@ search remove: user.vscode("search.action.remove")
 cursorless record: user.vscode("cursorless.recordTestCase")
 
 open recent: user.vscode("workbench.action.openRecent")
+
+change language:
+    user.vscode_with_plugin("workbench.action.editor.changeLanguageMode")
+    
+toggle word wrap:
+    user.vscode_with_plugin("editor.action.toggleWordWrap")

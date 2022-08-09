@@ -7,6 +7,14 @@ settings():
 
 step [next]: key("f10")
 
-resume: key("f8")
+continue: key("f8")
 
 file hunt: key(ctrl-p)
+
+[enable] all diaries:
+    key(ctrl-`)
+    sleep(50ms)
+    insert("PDE.DevConfig.isAllDiariesVisitEnabled=true")
+    key(enter)
+
+[focus] console: key(ctrl-`)
