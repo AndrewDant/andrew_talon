@@ -3,6 +3,10 @@ mode: command
 login:
 	insert("1111")
 	key(tab)
+	
+login extra:
+	insert("111111")
+	key(tab)
 
 admin login:
 	insert("54321")
@@ -76,3 +80,11 @@ handheld trainer:
 email work: insert('andrew.dant@clario.com')
 
 killer bee: user.kill_adb()
+
+[enable] all diaries:
+	user.switcher_focus_window_by_name('DevTools')
+	sleep(50ms)
+    key(ctrl-`)
+    sleep(50ms)
+    insert("PDE.DevConfig.isAllDiariesVisitEnabled=true")
+    key(enter)
