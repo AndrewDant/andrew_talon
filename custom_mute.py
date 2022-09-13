@@ -41,9 +41,9 @@ class CustomMute:
         initial_window = ui.active_window()
         app_list = None
         try:
-            app_list = actions.user.get_running_app_list("Microsoft Teams")
-        except:
             app_list = [actions.user.get_running_app("Discord")]
+        except:
+            app_list = actions.user.get_running_app_list("Microsoft Teams")
         for app in app_list:
             try:
                 actions.user.switcher_focus_app(app)

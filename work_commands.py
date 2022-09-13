@@ -9,3 +9,8 @@ class WorkCommands:
         """Kill the adb process if it is running"""
         cmd = f"taskkill /IM adb.exe /F"
         subprocess.run(cmd)
+        
+    def start_adb():
+        """Start the adb server process"""
+        cmd = f"adb start-server"
+        subprocess.run(cmd)

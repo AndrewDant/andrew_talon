@@ -79,7 +79,9 @@ handheld trainer:
 
 email work: insert('andrew.dant@clario.com')
 
-killer bee: user.kill_adb()
+(killer|kill the) bee: user.kill_adb()
+
+(starter|start the) bee: user.start_adb()
 
 [enable] all diaries:
 	user.switcher_focus_window_by_name('DevTools')

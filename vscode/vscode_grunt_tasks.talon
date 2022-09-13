@@ -27,7 +27,7 @@ tablet [just] install:
 start server:
     user.vscode_with_plugin("workbench.action.tasks.runTask", "npm: start - server")
 
-project startup:
+(project startup|clean strings):
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: pde-proj-start")
     
 jest: user.vscode_with_plugin("editor.action.triggerSuggest")
