@@ -62,3 +62,5 @@ super mute: user.mute_teams_or_discord()
 key(shift-f9): user.mute_teams_or_discord()
 
 [open] task manager: key(ctrl-shift-escape)
+
+type pasting: insert(clip.text())
