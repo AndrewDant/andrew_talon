@@ -20,8 +20,8 @@ go time zone:
 	key(tab)
 	key(enter)
 	sleep(100ms)
-	# key("down:124")
-	key("down:156")
+	key("down:124")
+	# key("down:156")
 	key(enter)
 	sleep(50ms)
 	key(ctrl-space)
@@ -90,3 +90,17 @@ email work: insert('andrew.dant@clario.com')
     sleep(50ms)
     insert("PDE.DevConfig.isAllDiariesVisitEnabled=true")
     key(enter)
+	
+(flash form|open form):
+	user.switcher_focus_window_by_name('DevTools')
+	sleep(50ms)
+    key(ctrl-`)
+    sleep(50ms)
+    insert("LF.router.navigate('questionnaire/some_questionnaire/checkAlwaysAvailability', {{trigger: true}})")
+	
+test string:
+	user.switcher_focus_window_by_name('DevTools')
+	sleep(50ms)
+    key(ctrl-`)
+    sleep(50ms)
+    insert("LF.getStrings('myText', $.noop, {{namespace: 'myQuestionnaire' }});")

@@ -30,4 +30,17 @@ start server:
 (project startup|clean strings):
     user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: pde-proj-start")
     
-jest: user.vscode_with_plugin("editor.action.triggerSuggest")
+site pad web:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: spw")
+    
+log pad web:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: lpw")
+    
+web host [staging]:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: web-host-staging")
+    
+web host dev:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: web-host-dev")
+    
+(stop|kill) web host:
+    user.vscode_with_plugin("workbench.action.tasks.runTask", "grunt: web-host-stop")
