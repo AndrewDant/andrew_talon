@@ -5,5 +5,9 @@ settings():
     user.mouse_enable_pop_drag = 1
     # key_wait = 64
     
-# key(shift-f10:down): mouse_drag(0)
-# key(shift-f10:up): mouse_release(0)
+angry emote: key(q)
+waiting emote: key(w)
+heal emote: key(a)
+target emote: key(s)
+exciting emote: key(e)
+love emote: key(r)
