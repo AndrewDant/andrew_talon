@@ -13,13 +13,11 @@ ctx = Context()
 
 def teams_mute_windows(app_list):
     for app in app_list:
-        # print(vars(app))
-        print(app.active_window)
-        if app.active_window.title = :
-        actions.user.switcher_focus_app(app)
-        actions.sleep("50ms")
-        actions.key("ctrl-shift-m")
-        actions.sleep("50ms")
+        if app.active_window and "Microsoft Teams" in app.active_window.title:
+            actions.user.switcher_focus_app(app)
+            actions.sleep("50ms")
+            actions.key("ctrl-shift-m")
+            actions.sleep("50ms")
 
 @mod.action_class
 class CustomMute:
@@ -27,14 +25,7 @@ class CustomMute:
         """Mute teams whether it is focused or not"""
         initial_window = ui.active_window()
         app_list = actions.user.get_running_app_list("Microsoft Teams")
-        for app in app_list:
-            actions.user.switcher_focus_app(app)
-            actions.sleep("50ms")
-            actions.key("ctrl-shift-m")
-            actions.sleep("50ms")
-        # actions.sleep("50ms")
-        # actions.key("ctrl-shift-m")
-        # actions.sleep("50ms")
+        teams_mute_windows(app_list)
         actions.user.switcher_focus_window(initial_window)
         
     def mute_discord_anywhere():
