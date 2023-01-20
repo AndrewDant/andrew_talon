@@ -22,3 +22,9 @@ change language:
     
 toggle word wrap:
     user.vscode_with_plugin("editor.action.toggleWordWrap")
+    
+(show file|open file): user.vscode_with_plugin("extension.openFileFromPath")
+
+jest: user.vscode_with_plugin("editor.action.triggerSuggest")
+
+toggle hats: user.vscode("cursorless.toggleDecorations")
