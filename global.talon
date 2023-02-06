@@ -7,7 +7,6 @@ show desktop: key("super-d")
 pop: key("space")
 
 <number_small> o'clock: insert("{number_small}:00")
-
 <user.thing_length>: core.repeat_command(thing_length)
 
 ^(go to sleep|hey there|voice off) [<phrase>]$: speech.disable()
@@ -15,6 +14,10 @@ pop: key("space")
 key(shift-f11): speech.toggle()
 
 coalpop: insert(": ")
+
+coalclap:
+	insert(":")
+	key(enter)
 
 compop: insert(", ")
 
@@ -64,3 +67,19 @@ key(shift-f9): user.mute_teams_or_discord()
 [open] task manager: key(ctrl-shift-escape)
 
 type pasting: insert(clip.text())
+
+square root [symbol]: insert('√')
+
+(sigma|summation symbol): insert('∑')
+
+(variance symbol|standard deviation symbol|lower case sigma): insert('σ')
+
+mu: insert('µ')
+
+pi symbol: insert('π')
+
+space equals: insert(' = ')
+
+ex bar: insert('x̄')
+
+pea hat: insert('p̂')
