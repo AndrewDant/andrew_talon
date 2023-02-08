@@ -15,3 +15,5 @@ change type: key(ctrl-n)
 new card: key(a)
 
 browse deck: key(b)
+
+test this: user.test()

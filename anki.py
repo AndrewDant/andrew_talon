@@ -1,14 +1,23 @@
-from talon import Context, Module, actions
+from talon import Context, Module, actions, clip
 
 mod = Module()
+
+ctx = Context()
+ctx.matches = 'app: anki.exe'
+@ctx.action_class('edit')
+class Actions:
+    def selected_text() -> str:
+        with clip.revert():
+            actions.edit.copy()
+            actions.sleep("100ms")
+            return clip.text()
 
 @mod.action_class
 class Actions:
     def test():
         """test text insertion"""
         selected = actions.edit.selected_text()
-        num = 1
-        # actions.insert(f"this is some other text {num}")
+        actions.insert(f"{{{{c1::{selected}}}}}")
 
     def cloze_wrap_selection(cloze_number: int) -> str:
         """Wraps the current selection in a cloze."""
