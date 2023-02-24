@@ -106,3 +106,6 @@ test string:
     key(ctrl-`)
     sleep(50ms)
     insert("LF.getStrings('myText', $.noop, {{namespace: 'myQuestionnaire' }});")
+	
+jira that:
+	user.open_jira_link()
