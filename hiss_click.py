@@ -1,4 +1,4 @@
-from talon import Module, actions, noise
+from talon import Module, actions, noise, ctrl
 from talon_plugins import eye_mouse
 
 ongoing_hiss = False
@@ -11,7 +11,7 @@ class UserActions:
         """Invoked when the user starts hissing (potentially while speaking)"""
         print("hiss start")
 
-        actions.mouse_click(1)
+        ctrl.mouse_click(button=1, hold=16000)
 
     def noise_hiss_stop():
         """Invoked when the user finishes hissing (potentially while speaking)"""
