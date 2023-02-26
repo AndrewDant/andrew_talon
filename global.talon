@@ -67,19 +67,3 @@ key(shift-f9): user.mute_teams_or_discord()
 [open] task manager: key(ctrl-shift-escape)
 
 type pasting: insert(clip.text())
-
-square root [symbol]: insert('√')
-
-(sigma|summation symbol): insert('∑')
-
-(variance symbol|standard deviation symbol|lower case sigma): insert('σ')
-
-mu: insert('µ')
-
-pi symbol: insert('π')
-
-space equals: insert(' = ')
-
-ex bar: insert('x̄')
-
-pea hat: insert('p̂')
