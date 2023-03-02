@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
-from talon import Module, actions, noise
+from talon import Module, actions, noise, ctrl
 from talon_plugins import eye_mouse
 
-min_hiss_millis = 100
+min_hiss_millis = 150
 min_time_delta = timedelta(milliseconds=min_hiss_millis)
 ongoing_hiss = False
 start_time = datetime.now()
@@ -23,7 +23,7 @@ class UserActions:
         global min_time_delta, ongoing_hiss, start_time
         print(datetime.now() - start_time)
         if ongoing_hiss and datetime.now() - start_time >= min_time_delta:
-            actions.mouse_click(1)
+             ctrl.mouse_click(button=1, hold=16000)
         ongoing_hiss = False
 
 
