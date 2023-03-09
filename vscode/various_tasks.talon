@@ -7,6 +7,7 @@ quick fix: key(ctrl-.)
 copy command id: user.copy_command_id()
 
 pipeline: user.vscode_with_plugin("gl.pipelineActions")
+open [active] file in browser: user.vscode_with_plugin("gl.openActiveFile")
 
 search next: user.vscode("search.action.focusNextSearchResult")
 search last: user.vscode("search.action.focusPreviousSearchResult")
