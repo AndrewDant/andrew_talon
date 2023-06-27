@@ -16,7 +16,7 @@ class WorkCommands:
         cmd = f"adb start-server"
         subprocess.run(cmd)
         
-    def open_jira_link():
+    def open_jira_link(base_url: str):
         """Open a jira ticket in a new browser tab using only the ticket id"""
         selected = actions.edit.selected_text()
         if not selected:
@@ -43,6 +43,6 @@ class WorkCommands:
         actions.app.tab_open()
         actions.browser.focus_address()
         actions.sleep("100ms")
-        actions.insert(f"https://jira.ert.com/jira/browse/{ticket_id}")
+        actions.insert(f"{base_url}/jira/browse/{ticket_id}")
         actions.sleep("100ms")
         actions.key("enter")

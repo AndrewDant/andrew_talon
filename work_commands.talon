@@ -100,6 +100,13 @@ email work old: insert('andrew.dant@ert.com')
     sleep(50ms)
     insert("LF.router.navigate('questionnaire/some_questionnaire/checkAlwaysAvailability', {{trigger: true}})")
 	
+(branch to screen|skip to screen):
+	user.switcher_focus_window_by_name('DevTools')
+	sleep(50ms)
+    key(ctrl-`)
+    sleep(50ms)
+    insert("LF.Branching.Helpers.navigateToScreen('some_screen')")
+	
 test string:
 	user.switcher_focus_window_by_name('DevTools')
 	sleep(50ms)
@@ -108,4 +115,7 @@ test string:
     insert("LF.getStrings('myText', $.noop, {{namespace: 'myQuestionnaire' }});")
 	
 jira that:
-	user.open_jira_link()
+	user.open_jira_link('https://jira.ert.com')
+	
+jira dev [that]:
+	user.open_jira_link('https://jiradev.ert.com')
