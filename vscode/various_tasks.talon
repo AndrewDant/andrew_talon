@@ -29,3 +29,5 @@ toggle word wrap:
 jest: user.vscode_with_plugin("editor.action.triggerSuggest")
 
 toggle hats: user.vscode("cursorless.toggleDecorations")
+
+toggle blame: user.vscode("gitlens.toggleFileBlame")
