@@ -1,0 +1,7 @@
+entails: insert('⊨')
+implies: insert('⇒')
+biconditional: insert('⇔')
+equivalent: insert('≡')
+negate: insert('¬')
+for all: insert('∀')
+exists: insert('∃')
