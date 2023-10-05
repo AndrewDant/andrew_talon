@@ -11,4 +11,8 @@ settings():
 
 file hunt: key(ctrl-p)
 
+line hunt:
+    key(ctrl-p)
+    key(:)
+
 [focus] console: key(ctrl-`)
