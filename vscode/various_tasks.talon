@@ -31,3 +31,5 @@ jest: user.vscode_with_plugin("editor.action.triggerSuggest")
 toggle hats: user.vscode("cursorless.toggleDecorations")
 
 toggle blame: user.vscode("gitlens.toggleFileBlame")
+
+revert [selected] range: user.vscode("git.revertSelectedRanges")
