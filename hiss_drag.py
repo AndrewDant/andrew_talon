@@ -1,7 +1,7 @@
 from talon import Module, actions, noise, cron, scope
 from talon_plugins import eye_mouse
 
-min_hiss_time = "200ms"
+min_hiss_time = "1000ms"
 ongoing_hiss = False
 
 mod = Module()
@@ -21,9 +21,11 @@ class UserActions:
         """Invoked when the user finishes hissing (potentially while speaking)"""
         print("hiss stop")
         global ongoing_hiss
+        if ongoing_hiss:
+            actions.mouse_release(0)
+        
         ongoing_hiss = False
 
-        actions.mouse_release(0)
 
 
 def validate_hiss():
