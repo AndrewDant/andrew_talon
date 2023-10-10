@@ -1,8 +1,9 @@
-from talon import Module, actions, noise, cron, scope
+from talon import Module, actions, noise, ctrl, cron
 from talon_plugins import eye_mouse
+from datetime import datetime, timedelta
 
-min_hiss_time = "1000ms"
-ongoing_hiss = False
+latest_hiss_start = None
+min_hiss_milliseconds = 1000
 
 mod = Module()
 
@@ -10,32 +11,28 @@ mod = Module()
 class UserActions:
     def noise_hiss_start():
         """Invoked when the user starts hissing (potentially while speaking)"""
-        print("hiss start")
-        global ongoing_hiss
-        ongoing_hiss = True
-
-        # TODO this may misfire if there are a series of s sounds close together
-        cron.after(min_hiss_time, validate_hiss)
+        global latest_hiss_start
+        
+        if not latest_hiss_start:
+            latest_hiss_start = datetime.now()
+            cron.after(f"{min_hiss_milliseconds + 5}ms", validate_hiss)
 
     def noise_hiss_stop():
         """Invoked when the user finishes hissing (potentially while speaking)"""
-        print("hiss stop")
-        global ongoing_hiss
-        if ongoing_hiss:
+        global latest_hiss_start
+        # probably need a better check here
+        if latest_hiss_start:
             actions.mouse_release(0)
         
-        ongoing_hiss = False
-
+        latest_hiss_start = None
 
 
 def validate_hiss():
-    if ongoing_hiss:
+    if latest_hiss_start and datetime.now() - latest_hiss_start >= timedelta(milliseconds=min_hiss_milliseconds):
         actions.mouse_drag(0)
 
 
 def hiss_handler(active):
-    print('hiss handler: ' + str(active))
-
     if active:
         actions.user.noise_hiss_start()
     else:
