@@ -36,13 +36,13 @@ talon launch config:
     user.system_command_nb("code ~/.talon/user") 
 
 laser [vision]:
-	user.mouse_toggle_control_mouse()
+	tracking.control_toggle()
 	
 ^laser debug$: tracking.control_debug_toggle()
 ^laser gaze$: tracking.control_gaze_toggle()
 ^laser head$: tracking.control_head_toggle()
 	
-key(shift-f10): user.mouse_toggle_control_mouse()
+key(shift-f10): tracking.control_toggle()
 
 clipboard: key("super-v")
 
