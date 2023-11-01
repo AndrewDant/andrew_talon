@@ -1,3 +1,5 @@
+type pasting: insert(clip.text())
+
 paste plain: key("ctrl-shift-v")
 
 screen snippet: key("super-shift-s")
@@ -9,9 +11,7 @@ show desktop: key("super-d")
 <number_small> o'clock: insert("{number_small}:00")
 <user.thing_length>: core.repeat_command(thing_length)
 
-^(go to sleep|hey there|voice off|come in) [<phrase>]$: speech.disable()
-
-key(shift-f11): speech.toggle()
+^(go to sleep|hey there|voice off|come in|drowse) [<phrase>]$: speech.disable()
 
 coalpop: insert(": ")
 
@@ -42,8 +42,6 @@ laser [vision]:
 ^laser gaze$: tracking.control_gaze_toggle()
 ^laser head$: tracking.control_head_toggle()
 	
-key(shift-f10): tracking.control_toggle()
-
 clipboard: key("super-v")
 
 (mute|muting) [myself]: key(ctrl-shift-m)
@@ -62,8 +60,6 @@ discord mute: user.mute_discord_anywhere()
 
 super mute: user.mute_teams_or_discord()
 
-key(shift-f9): user.mute_teams_or_discord()
-
 [open] task manager: key(ctrl-shift-escape)
 
-type pasting: insert(clip.text())
+then: skip()
