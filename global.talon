@@ -6,8 +6,6 @@ screen snippet: key("super-shift-s")
 
 show desktop: key("super-d")
 
-(pop|void): key("space")
-
 <number_small> o'clock: insert("{number_small}:00")
 <user.thing_length>: core.repeat_command(thing_length)
 
