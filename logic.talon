@@ -5,3 +5,6 @@ equivalent: insert('≡')
 negate: insert('¬')
 for all: insert('∀')
 exists: insert('∃')
+
+subset: insert('⊆')
+strict subset: insert('⊂')
