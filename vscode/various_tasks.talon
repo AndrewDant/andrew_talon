@@ -30,3 +30,7 @@ toggle hats: user.vscode("cursorless.toggleDecorations")
 toggle blame: user.vscode("gitlens.toggleFileBlame")
 
 revert [selected] range: user.vscode("git.revertSelectedRanges")
+
+git graph: user.vscode("git-graph.view")
+git clone: user.vscode("git.clone")
+git add remote: user.vscode("git.addRemote")
