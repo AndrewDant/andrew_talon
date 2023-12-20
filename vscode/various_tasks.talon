@@ -1,6 +1,6 @@
 app: vscode
 -
-generate docs: key(alt-j)
+generate docs: user.vscode("jsdoc-generator.generateJsdoc")
 
 quick fix: key(ctrl-.)
 

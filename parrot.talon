@@ -6,4 +6,4 @@ parrot(whistle_high:repeat):
 	
 parrot(dental_click):
 	# app.notify('dental')
-	# tracking.control_toggle()
+	tracking.control_toggle()
