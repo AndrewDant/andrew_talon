@@ -1,3 +1,5 @@
+not mode: user.gaming
+-
 parrot(whistle_low:repeat):
 	user.whistle_scroll_up(power)
 

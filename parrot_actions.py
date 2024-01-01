@@ -14,6 +14,6 @@ class UserActions:
         actions.mouse_scroll(-1 * transform_power(power))
 
 def transform_power(power: float):
-    transformed_power = 2 * (power ** 0.75)
+    transformed_power = power
     # print(f"Original power: ${power}\n\t\t\t\tTransformed power: ${transformed_power}")
     return transformed_power

@@ -1,4 +1,3 @@
-mode: command
 title: /^Slay the Spire$/
 
 -

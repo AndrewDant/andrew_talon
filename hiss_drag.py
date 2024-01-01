@@ -3,7 +3,7 @@ from talon_plugins import eye_mouse
 from datetime import datetime, timedelta
 
 latest_hiss_start = None
-min_hiss_milliseconds = 800
+min_hiss_milliseconds = 500
 hiss_cron = None
 
 mod = Module()
