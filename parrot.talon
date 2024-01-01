@@ -9,3 +9,8 @@ parrot(whistle_high:repeat):
 parrot(dental_click):
 	# app.notify('dental')
 	tracking.control_toggle()
+	
+parrot(palate_click):
+	app.notify('palate')
+	core.repeat_command(1)
+	
