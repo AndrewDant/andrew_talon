@@ -1,6 +1,7 @@
 app: anki.exe
 -
 start close: insert('{{{{c1::')
+start close <number_small>: insert('{{{{c{number_small}::')
 
 end close: insert('}}}}')
 
@@ -25,3 +26,8 @@ browse deck: key(b)
 test this: user.test()
 
 next: key(right)
+
+again: key(1)
+hard: key(2)
+good: key(3)
+easy: key(4)

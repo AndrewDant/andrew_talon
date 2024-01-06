@@ -1,4 +1,4 @@
-app: AcrossTheObelisk.exe
+app.exe: AcrossTheObelisk.exe
 -
 settings():
     user.mouse_enable_pop_click = 0

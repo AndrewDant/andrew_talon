@@ -1,4 +1,4 @@
-square root [symbol]: insert('√')
+(square root [symbol]|squirt): insert('√')
 
 (sigma|summation symbol): insert('∑')
 
@@ -17,3 +17,5 @@ pea hat: insert('p̂')
 probability: user.insert_between("P(", ")")
 
 beta: insert('β')
+
+ki: insert('𝜒')
