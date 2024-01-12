@@ -11,7 +11,7 @@ show desktop: key("super-d")
 
 ^(go to sleep|hey there|voice off|come in|drowse) [<phrase>]$: speech.disable()
 
-coalpop: insert(": ")
+(coal pop|coalpop): insert(": ")
 
 coalclap:
 	insert(":")
@@ -61,3 +61,5 @@ super mute: user.mute_teams_or_discord()
 [open] task manager: key(ctrl-shift-escape)
 
 then: skip()
+
+local host <number>: insert('localhost:{number}') 
