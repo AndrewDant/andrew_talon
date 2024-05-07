@@ -46,3 +46,8 @@ accept both: user.vscode("merge-conflict.accept.both")
 accept all current: user.vscode("merge-conflict.accept.all-current")
 accept all incoming: user.vscode("merge-conflict.accept.all-incoming")
 accept all both: user.vscode("merge-conflict.accept.all-both")
+
+refresh tasks: user.vscode("bitlab-vscode.taskpanel.refresh")
+
+real file: user.vscode("gitlens.openWorkingFile")
+keep file: user.vscode("workbench.action.keepEditor")
