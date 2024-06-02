@@ -1,10 +1,13 @@
 not mode: user.gaming
 -
-parrot(whistle_low:repeat):
-	user.whistle_scroll_up(power)
-
 parrot(whistle_high:repeat):
-	user.whistle_scroll_down(power)
+	user.whistle_up(power)
+
+parrot(whistle_low:repeat):
+	user.whistle_down(power)
+	
+whistle scroll: user.set_whistle_mode('scroll')
+whistle zoom: user.set_whistle_mode('zoom')
 	
 parrot(dental_click):
 	# app.notify('dental')
