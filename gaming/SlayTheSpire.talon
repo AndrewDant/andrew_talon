@@ -10,13 +10,13 @@ send it: key("e")
 
 map: key("m")
 
-the deck: key("d")
+[the] deck: key("d")
 
-draw pile: key("a")
+draw [pile]: key("a")
 
-discard pile: key("s")
+discard [pile]: key("s")
 
-exhaust pile: key("x")
+exhaust [pile]: key("x")
 
 scroll up: user.mouse_scroll_up(55)
 

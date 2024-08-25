@@ -1,16 +1,17 @@
 app.exe: Lethal Company.exe
 -
-# use foot switch to toggle speech verses talk
-key(f13:down):
-	speech.disable()
-	key(t:down)
-	
-key(f13:up):
-	key(t:up)
-	speech.enable()
-    
 help:
     insert('help')
+    sleep(100ms)
+    key(enter)
+
+confirm:
+    insert('confirm')
+    sleep(100ms)
+    key(enter)
+
+deny:
+    insert('deny')
     sleep(100ms)
     key(enter)
 
@@ -19,13 +20,13 @@ moons:
     sleep(100ms)
     key(enter)
 
-(root|rout|route) {user.moons}:
-    insert(user.moons)
+{user.moons}:
+    insert('route {user.moons}')
     sleep(100ms)
     key(enter)
 
-(info) {user.moons}:
-    insert(user.moons)
+(info {user.moons}|{user.moons} info):
+    insert('{user.moons} info')
     sleep(100ms)
     key(enter)
 
@@ -38,8 +39,20 @@ view monitor:
     insert('view monitor')
     sleep(100ms)
     key(enter)
+    
+switch:
+    insert('switch')
+    sleep(100ms)
+    key(enter)
+
+other:
+    insert('other')
+    sleep(100ms)
+    key(enter)
 
 scan:
     insert('scan')
     sleep(100ms)
     key(enter)
+
+(quit|leave) [terminal]: key(tab)
