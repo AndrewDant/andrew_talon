@@ -1,19 +1,32 @@
-import math
 from talon import Module, actions
 
 mod = Module()
+whistle_mode = 'scroll'
 
 @mod.action_class
 class UserActions:
-    def whistle_scroll_up(power: float):
-        """Transform the whistle volume into an amount to scroll upwards"""
-        actions.mouse_scroll(transform_power(power))
-    
-    def whistle_scroll_down(power: float):
+    def whistle_up(power: float):
         """Transform the whistle volume into an amount to scroll downwards"""
-        actions.mouse_scroll(-1 * transform_power(power))
+        match whistle_mode:
+            case 'scroll':
+                actions.mouse_scroll(-1 * power)
+            case 'zoom':
+                actions.key('ctrl:down')
+                actions.mouse_scroll(-1 * power)
+                actions.key('ctrl:up')
+    
+    def whistle_down(power: float):
+        """Transform the whistle volume into an amount to scroll upwards"""
+        match whistle_mode:
+            case 'scroll':
+                actions.mouse_scroll(power)
+            case 'zoom':
+                actions.key('ctrl:down')
+                actions.mouse_scroll(power)
+                actions.key('ctrl:up')
 
-def transform_power(power: float):
-    transformed_power = power
-    # print(f"Original power: ${power}\n\t\t\t\tTransformed power: ${transformed_power}")
-    return transformed_power
+    def set_whistle_mode(mode: str):
+        """Set a string as the whistle mode"""
+        global whistle_mode
+        whistle_mode = mode
+        print(whistle_mode)

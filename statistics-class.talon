@@ -4,7 +4,7 @@ square root [symbol]: insert('√')
 
 (variance symbol|standard deviation symbol|lower case sigma): insert('σ')
 
-mu: insert('µ')
+# mu: insert('µ')
 
 pi symbol: insert('π')
 

@@ -33,7 +33,8 @@ toggle hats: user.vscode("cursorless.toggleDecorations")
 
 toggle blame: user.vscode("gitlens.toggleFileBlame")
 
-revert [selected] range: user.vscode("git.revertSelectedRanges")
+# moved into custom cursorless commands, along with stage and unstage selected ranges
+# revert [selected] range: user.vscode("git.revertSelectedRanges")
 
 git graph: user.vscode("git-graph.view")
 git clone: user.vscode("git.clone")
@@ -46,3 +47,13 @@ accept both: user.vscode("merge-conflict.accept.both")
 accept all current: user.vscode("merge-conflict.accept.all-current")
 accept all incoming: user.vscode("merge-conflict.accept.all-incoming")
 accept all both: user.vscode("merge-conflict.accept.all-both")
+
+refresh tasks: user.vscode("bitlab-vscode.taskpanel.refresh")
+
+# TODO this only works in specific contexts, need to configure a conditional keybinding
+real file: user.vscode("git.openFile")
+real old file: user.vscode("git-graph.openFile")
+keep file: user.vscode("workbench.action.keepEditor")
+
+powershell terminal: user.vscode_with_plugin("andreas.setSetting", "terminal.integrated.defaultProfile.windows", "PowerShell", "global")
+git bash terminal: user.vscode_with_plugin("andreas.setSetting", "terminal.integrated.defaultProfile.windows", "Git Bash", 'global')

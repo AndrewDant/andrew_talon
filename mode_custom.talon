@@ -1,18 +1,18 @@
 not mode: sleep
 -
-^commander:
+^commander$:
     mode.disable("dictation")
     mode.disable("user.gaming")
     mode.enable("command")
     
-^dictator:
+^dictator$:
     mode.disable("command")
     mode.disable("user.gaming")
     mode.enable("dictation")
 
-^(gamer|game mode):
+^(gamer|game mode)$:
     mode.disable("command")
     mode.disable("dictation")
     mode.enable("user.gaming")
 
-^talon (re start|restart): user.talon_relaunch()
+^talon (re start|restart)$: user.talon_relaunch()

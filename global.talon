@@ -11,7 +11,7 @@ show desktop: key("super-d")
 
 ^(go to sleep|hey there|voice off|come in|drowse) [<phrase>]$: speech.disable()
 
-coalpop: insert(": ")
+(coal pop|coalpop): insert(": ")
 
 coalclap:
 	insert(":")
@@ -33,9 +33,7 @@ google that: key(ctrl-g)
 talon launch config:
     user.system_command_nb("code ~/.talon/user") 
 
-laser [vision]:
-	tracking.control_toggle()
-	
+laser [vision]:	tracking.control_toggle()
 ^laser debug$: tracking.control_debug_toggle()
 ^laser gaze$: tracking.control_gaze_toggle()
 ^laser head$: tracking.control_head_toggle()
@@ -61,3 +59,5 @@ super mute: user.mute_teams_or_discord()
 [open] task manager: key(ctrl-shift-escape)
 
 then: skip()
+
+local host <number>: insert('localhost:{number}') 
