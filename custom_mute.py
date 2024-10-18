@@ -11,19 +11,37 @@ from talon import (
 mod = Module()
 ctx = Context()
 
+meeting_window = None
+
 def teams_mute_windows(app_list):
-    for app in app_list:
-        if app.active_window and "Microsoft Teams" in app.active_window.title:
-            actions.user.switcher_focus_app(app)
-            actions.sleep("50ms")
-            actions.key("ctrl-shift-m")
-            actions.sleep("50ms")
+    global meeting_window
+    window_to_focus = None
+    if meeting_window:
+        window_to_focus = meeting_window
+    else:
+        for app in app_list:
+            # teams now shows up as a single app with multiple windows, so if the active window is not the right one then this won't work
+            if app.active_window and "Microsoft Teams" in app.active_window.title:
+                window_to_focus = app.active_window
+    
+    if window_to_focus:
+        actions.user.switcher_focus_window(window_to_focus)
+        actions.sleep("50ms")
+        actions.key("ctrl-shift-m")
+        actions.sleep("50ms")
 
 @mod.action_class
 class CustomMute:
+    def store_meeting_window():
+        """save the current window so we know which one to focus in the future"""
+        global meeting_window
+        meeting_window = ui.active_window()
+        
     def mute_teams_anywhere():
         """Mute teams whether it is focused or not"""
         initial_window = ui.active_window()
+        
+        # this gets apps with either an exact name match or name that starts with this text. Usually that's only one app, even if it has multiple windows
         app_list = actions.user.get_running_app_list("Microsoft Teams")
         teams_mute_windows(app_list)
         actions.user.switcher_focus_window(initial_window)

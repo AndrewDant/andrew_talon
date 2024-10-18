@@ -52,6 +52,8 @@ focus next: key(alt-tab)
 
 teams mute: user.mute_teams_anywhere()
 
+save (meeting|window): user.store_meeting_window()
+
 discord mute: user.mute_discord_anywhere()
 
 super mute: user.mute_teams_or_discord()
