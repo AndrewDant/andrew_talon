@@ -11,6 +11,11 @@ tag(): user.line_commands
 
 ^continue: key("f8")
 
-file hunt: key(ctrl-p)
+file hunt [<user.text>]:
+    key(ctrl-p)
+    sleep(100ms)
+    insert(text or "")
 
 [focus] console: key(ctrl-`)
+
+disable breakpoints: key(ctrl-f8)

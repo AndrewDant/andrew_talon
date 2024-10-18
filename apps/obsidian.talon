@@ -12,14 +12,6 @@ file hunt [<user.text>]:
     sleep(100ms)
     insert(text or "")
 
-pop [<user.text>]:
-    key(ctrl-o)
-    edit.delete_line()
-    sleep(100ms)
-    insert(text or "")
-    sleep(300ms)
-    key(enter)
-
 pop daily note:
     key(ctrl-p)
     sleep(100ms)
@@ -49,3 +41,5 @@ rack switch:    key(alt-c)
 
 show (help | settings):     key(ctrl-,)
 add (prop | tag):           key(ctrl-;)
+
+link: user.insert_between("[[", "]]")

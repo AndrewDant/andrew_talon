@@ -39,6 +39,7 @@ toggle blame: user.vscode("gitlens.toggleFileBlame")
 git graph: user.vscode("git-graph.view")
 git clone: user.vscode("git.clone")
 git add remote: user.vscode("git.addRemote")
+git discard: user.vscode("git.clean")
 
 accept current: user.vscode("merge-conflict.accept.current")
 accept incoming: user.vscode("merge-conflict.accept.incoming")
@@ -48,7 +49,10 @@ accept all current: user.vscode("merge-conflict.accept.all-current")
 accept all incoming: user.vscode("merge-conflict.accept.all-incoming")
 accept all both: user.vscode("merge-conflict.accept.all-both")
 
-refresh tasks: user.vscode("bitlab-vscode.taskpanel.refresh")
+refresh tasks:
+    user.vscode("workbench.view.explorer")
+    sleep(40ms)
+    user.vscode("bitlab-vscode.taskpanel.refresh")
 
 # TODO this only works in specific contexts, need to configure a conditional keybinding
 real file: user.vscode("git.openFile")
