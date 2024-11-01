@@ -15,17 +15,22 @@ meeting_window = None
 
 def teams_mute_windows(app_list):
     global meeting_window
-    window_to_focus = None
+    window_was_focused = False
     if meeting_window:
-        window_to_focus = meeting_window
-    else:
+        try:
+            actions.user.switcher_focus_window(meeting_window)
+            window_was_focused = True
+        finally:
+            pass
+    
+    if not window_was_focused:
         for app in app_list:
             # teams now shows up as a single app with multiple windows, so if the active window is not the right one then this won't work
             if app.active_window and "Microsoft Teams" in app.active_window.title:
-                window_to_focus = app.active_window
+                actions.user.switcher_focus_window(app.active_window)
+                window_was_focused = True
     
-    if window_to_focus:
-        actions.user.switcher_focus_window(window_to_focus)
+    if window_was_focused:
         actions.sleep("50ms")
         actions.key("ctrl-shift-m")
         actions.sleep("50ms")
