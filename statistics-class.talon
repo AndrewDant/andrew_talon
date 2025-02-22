@@ -16,4 +16,10 @@ pea hat: insert('p̂')
 
 probability: user.insert_between("P(", ")")
 
+given: insert('|')
+
 beta: insert('β')
+
+theta: insert('θ')
+
+phi: insert('φ')

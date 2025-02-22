@@ -43,3 +43,6 @@ show (help | settings):     key(ctrl-,)
 add (prop | tag):           key(ctrl-;)
 
 link: user.insert_between("[[", "]]")
+link this:
+    text = edit.selected_text()
+    user.paste("[[{text}]]")
