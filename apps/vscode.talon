@@ -61,3 +61,5 @@ keep file: user.vscode("workbench.action.keepEditor")
 
 powershell terminal: user.vscode_with_plugin("andreas.setSetting", "terminal.integrated.defaultProfile.windows", "PowerShell", "global")
 git bash terminal: user.vscode_with_plugin("andreas.setSetting", "terminal.integrated.defaultProfile.windows", "Git Bash", 'global')
+
+go [to] line <number>: user.vscode_with_plugin("andreas.goToLine", number - 1)
