@@ -20,7 +20,7 @@ def teams_mute_windows(app_list):
         try:
             actions.user.switcher_focus_window(meeting_window)
             window_was_focused = True
-        finally:
+        except:
             pass
     
     if not window_was_focused:
