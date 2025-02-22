@@ -63,3 +63,5 @@ super mute: user.mute_teams_or_discord()
 then: skip()
 
 local host <number>: insert('localhost:{number}') 
+
+toggle hiss: user.toggle_hiss()

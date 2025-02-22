@@ -1,5 +1,4 @@
 from talon import Module, actions, noise, ctrl, cron
-from talon_plugins import eye_mouse
 from datetime import datetime, timedelta
 
 latest_hiss_start = None
@@ -8,9 +7,18 @@ hiss_cron = None
 
 mod = Module()
 
+# I wanted a way to temporarily disable hiss click on some computers without needing to change files back and forth
+# TODO should this be a setting so I can make it context dependent?
+is_hiss_enabled = True
 
 @mod.action_class
 class UserActions:
+    def toggle_hiss():
+        """Toggles whether or not hiss click is enabled"""
+
+        global is_hiss_enabled
+        is_hiss_enabled = not is_hiss_enabled
+
     def noise_hiss_start():
         """Invoked when the user starts hissing (potentially while speaking)"""
 
@@ -32,11 +40,12 @@ def validate_hiss():
 
 
 def hiss_handler(active):
-    # if active_eyetracker:
-    if active:
-        actions.user.noise_hiss_start()
-    else:
-        actions.user.noise_hiss_stop()
+    if is_hiss_enabled:
+        if active:
+            actions.user.noise_hiss_start()
+        else:
+            actions.user.noise_hiss_stop()
+
 
 
 # register the handler to the noise
