@@ -65,14 +65,18 @@ class CustomMute:
         initial_window = ui.active_window()
         app_list = None
         is_teams = False
+        is_discord = False
         try:
             app_list = [actions.user.get_running_app("Discord")]
         except:
-            app_list = actions.user.get_running_app_list("Microsoft Teams")
-            is_teams = True
+            try:
+                app_list = actions.user.get_running_app_list("Microsoft Teams")
+                is_discord = True
+            except:
+                print('Could not find discord or teams running.')
         if is_teams:
             teams_mute_windows(app_list)
-        else:
+        elif is_discord:
             for app in app_list:
                 try:
                     actions.user.switcher_focus_app(app)
@@ -81,5 +85,9 @@ class CustomMute:
                 actions.sleep("60ms")
                 actions.key("ctrl-shift-m")
                 actions.sleep("60ms")
+        else:
+            actions.sleep("60ms")
+            actions.key("ctrl-shift-m")
+            actions.sleep("60ms")
         actions.user.switcher_focus_window(initial_window)
         
